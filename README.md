@@ -30,19 +30,19 @@ A polished, accessible single-page application featuring a modern email/password
 - **React Hooks**: Modern React patterns with useState, useRef, and useEffect
 - **Mock Authentication**: Simulated server interaction with realistic delays
 - **Form State Management**: Comprehensive handling of form data, errors, and loading states
-- **Field Disabling Strategy**: Uses `isLoading` state to disable all interactive elements during submission
+- **Field Disabling Strategy**: Uses `isLoading` state on fieldset to disable all interactive elements during submission
 
 ## Form Field Disabling
 
 The application implements a robust field disabling strategy during form submission:
 
-\`\`\`typescript
-// All form inputs are disabled when isLoading is true
-<field
+```typescript
+
+<fieldset
   disabled={isLoading}
 />
 
-\`\`\`
+```
 
 This prevents:
 - Multiple form submissions
@@ -53,7 +53,7 @@ This prevents:
 ## Demo Credentials
 
 For testing purposes, use these credentials:
-- **Email**: `demo@example.com`
+- **Email**: `reply@evilmartians.com`
 - **Password**: `password123`
 
 ## Getting Started
