@@ -2,6 +2,7 @@
   "name": "loginform",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://evergreenx.github.io/loginform",
   "type": "module",
   "scripts": {
     "dev": "vite",
