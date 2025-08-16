@@ -16,7 +16,7 @@ interface FormErrors {
 export default function LoginPage() {
   const [formData, setFormData] = useState<FormData>({
     email: "",
-    password: "",
+    password: ""
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isLoading, setIsLoading] = useState(false);
