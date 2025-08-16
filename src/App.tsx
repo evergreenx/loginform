@@ -22,12 +22,12 @@ export default function LoginPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [touched, setTouched] = useState<{ email: boolean; password: boolean }>(
-    {
-      email: false,
-      password: false,
-    }
-  );
+  // const [touched, setTouched] = useState<{ email: boolean; password: boolean }>(
+  //   {
+  //     email: false,
+  //     password: false,
+  //   }
+  // );
 
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
@@ -78,7 +78,7 @@ export default function LoginPage() {
   };
 
   const handleBlur = (field: keyof FormData) => {
-    setTouched((prev) => ({ ...prev, [field]: true }));
+    // setTouched((prev) => ({ ...prev, [field]: true }));
 
     // Validate field on blur if it has been touched
     const newErrors = { ...errors };
@@ -138,7 +138,7 @@ export default function LoginPage() {
         // Success - in a real app, you'd redirect or update app state
         alert("Login successful! 🎉");
         setFormData({ email: "", password: "" });
-        setTouched({ email: false, password: false });
+        // setTouched({ email: false, password: false });
       } else {
         setErrors({
           general: result.message || "Login failed. Please try again.",
