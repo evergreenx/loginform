@@ -75,7 +75,7 @@ This application is designed to be deployed on GitHub Pages. The mock authentica
 
 ## Technologies Used
 
-- **React 18** - UI framework
+- **React 19** - UI framework
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Styling and responsive design
 - **Modern Web Standards** - Semantic HTML, ARIA, and accessibility best practices
