@@ -1,7 +1,7 @@
 import type React from "react";
 
 import { useState, useRef, useEffect } from "react";
-
+import Logo from '../public/logo.svg'
 interface FormData {
   email: string;
   password: string;
@@ -102,9 +102,9 @@ export default function LoginPage() {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // Mock different responses for demo purposes
-    if (email === "demo@example.com" && password === "password123") {
+    if (email === "reply@evilmartians.com" && password === "password123") {
       return { success: true };
-    } else if (email === "demo@example.com") {
+    } else if (email === "reply@evilmartians.com") {
       return { success: false, message: "Invalid password. Please try again." };
     } else {
       return {
@@ -134,7 +134,7 @@ export default function LoginPage() {
       const result = await mockLogin(formData.email, formData.password);
 
       if (result.success) {
-        // Success - in a real app, you'd redirect or update app state
+       
         alert("Login successful! 🎉");
         setFormData({ email: "", password: "" });
         // setTouched({ email: false, password: false });
@@ -168,7 +168,7 @@ export default function LoginPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <img src="/logo.svg" />
+            <img src={Logo} alt="logo" />
           </div>
           <h1 className="text-2xl font-bold text-slate-900 mb-2">
             Welcome back
@@ -391,7 +391,7 @@ export default function LoginPage() {
             <p className="text-sm text-slate-600 mb-2 font-medium">
               Demo credentials:
             </p>
-            <p className="text-sm text-slate-500">Email: demo@example.com</p>
+            <p className="text-sm text-slate-500">Email: reply@evilmartians.com</p>
             <p className="text-sm text-slate-500">Password: password123</p>
           </div>
 
